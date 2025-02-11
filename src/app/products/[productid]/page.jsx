@@ -28,11 +28,11 @@ export default function ProductDetails() {
     }, [productid]);
 
     if (loading) {
-        return <div className="min-h-screen flex justify-center items-center text-gray-700">جاري تحميل المنتج...</div>;
+        return <div className="min-h-screen flex justify-center items-center text-gray-700">Laoding...</div>;
     }
 
     if (!product) {
-        return <div className="min-h-screen flex justify-center items-center text-red-500">لم يتم العثور على المنتج</div>;
+        return <div className="min-h-screen flex justify-center items-center text-red-500">No Product Founded...</div>;
     }
 
     return (
@@ -44,7 +44,7 @@ export default function ProductDetails() {
                 <div className="flex justify-between items-center mt-4">
                     <span className="text-2xl font-bold text-green-600">${product.price}</span>
                     <span className="flex items-center gap-1 text-gray-600">
-                        <Star className="w-5 h-5 text-yellow-500" /> {product.rating.rate} ({product.rating.count} مراجعات)
+                        <Star className="w-5 h-5 text-yellow-500" /> {product.rating.rate} ({product.rating.count} )
                     </span>
                 </div>
                 <p className="text-gray-700 mt-4 text-center">{product.description}</p>
